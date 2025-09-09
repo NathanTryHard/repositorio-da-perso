@@ -1,14 +1,88 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <link href='/style.css' rel='stylesheet'>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conceitos de CSS</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
-  <script defer type="text/javascript" src="/main.js"></script>
+  <header>
+    <h1>Guia de CSS</h1>
+    <nav>
+      <ul>
+        <li><a href="#cascata">Cascata</a></li>
+        <li><a href="#especificidade">Especificidade</a></li>
+        <li><a href="#seletores">Seletores</a></li>
+        <li><a href="#pseudo">Classes secundarias</a></li>
+        <li><a href="#display">Display</a></li>
+        <li><a href="#box">Box Model</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="cascata">
+      <h2>Regra da Cascata</h2>
+      <p>O CSS segue a regra da cascata, onde a prioridade depende da especificidade e da ordem do código.</p>
+    </section>
+
+    <section id="especificidade">
+      <h2>Especificidade</h2>
+      <ul>
+        <li>Tag: especificidade baixa</li>
+        <li>Classe: especificidade média</li>
+        <li>ID: especificidade alta</li>
+      </ul>
+    </section>
+
+    <section id="seletores">
+      <h2>Ordem dos Seletores</h2>
+      <p><code>.primeiro h1</code> → Seleciona qualquer &lt;h1&gt; dentro de .primeiro.</p>
+      <p><code>.primeiro > h1</code> → Seleciona apenas o filho direto.</p>
+      <p><code>.primeiro h1 + h1</code> → Seleciona o h1 que vem logo depois de outro h1.</p>
+    </section>
+
+    <section id="pseudo">
+      <h2>Classes secundarias</h2>
+      <ol>
+        <li><code>:first-child</code> → Primeiro filho</li>
+        <li><code>:last-child</code> → Último filho</li>
+        <li><code>:nth-child(n)</code> → Posição específica</li>
+        <li><code>:nth-of-type(n)</code> → Tipo específico</li>
+      </ol>
+    </section>
+
+    <section id="display">
+      <h2>Display Inline e Block</h2>
+      <p><strong>Block:</strong> ocupa toda a largura, aceita width/height.</p>
+      <p><strong>Inline:</strong> ocupa apenas o conteúdo, não aceita width/height.</p>
+
+      <div class="exemplo-display">
+        <p class="block">Sou block (p)</p>
+        <span class="inline">Sou inline (span)</span>
+        <span class="inline">Outro inline</span>
+      </div>
+    </section>
+
+    <section id="box">
+      <h2>Box Model</h2>
+      <p>O modelo de caixa é formado por: <strong>margin, border, padding e conteúdo</strong>.</p>
+
+      <div class="exemplo-box">
+        <p>Exemplo de margin, padding e border</p>
+      </div>
+
+      <h3>Box-sizing</h3>
+      <div class="box-exemplos">
+        <div class="content-box">content-box</div>
+        <div class="border-box">border-box</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p> Eu fiz véi.</p>
+  </footer>
 </body>
 </html>
